@@ -1,0 +1,100 @@
+:root {
+  /* Space */
+  --space-3xs: clamp(0.25rem, 0.2155rem + 0.1724vi, 0.3125rem);
+  --space-2xs: clamp(0.5rem, 0.4655rem + 0.1724vi, 0.5625rem);
+  --space-xs: clamp(0.75rem, 0.681rem + 0.3448vi, 0.875rem);
+  --space-s: clamp(1rem, 0.931rem + 0.3448vi, 1.125rem);
+  --space-m: clamp(1.5rem, 1.3966rem + 0.5172vi, 1.6875rem);
+  --space-l: clamp(2rem, 1.8621rem + 0.6897vi, 2.25rem);
+  --space-xl: clamp(3rem, 2.7931rem + 1.0345vi, 3.375rem);
+  --space-2xl: clamp(4rem, 3.7241rem + 1.3793vi, 4.5rem);
+  --space-3xl: clamp(6rem, 5.5862rem + 2.069vi, 6.75rem);
+    /* One-up pairs */
+  --space-2xl-3xl: clamp(4rem, 2.4828rem + 7.5862vi, 6.75rem);
+
+  /* Typography */
+  --size--2: clamp(0.6331rem, 0.7283rem + -0.1691vi, 0.6944rem);
+  --size--1: clamp(0.8333rem, 0.8275rem + 0.0293vi, 0.844rem);
+  --size-0: clamp(1rem, 0.931rem + 0.3448vi, 1.125rem);
+  --size-1: clamp(1.2rem, 1.0347rem + 0.8266vi, 1.4996rem);
+  --size-2: clamp(1.44rem, 1.1316rem + 1.5421vi, 1.999rem);
+  --size-3: clamp(1.728rem, 1.2112rem + 2.5839vi, 2.6647rem);
+  --size-4: clamp(2.0736rem, 1.2579rem + 4.0783vi, 3.552rem);
+  --size-5: clamp(2.4883rem, 1.2489rem + 6.1972vi, 4.7348rem);
+  /*Color*/
+  --color-purpleDark:hsl(251, 67%, 10%);
+  --color-purpleLight:hsl(240, 17%, 98%);
+  --color-purpleLightHsl:240, 17%, 98%;
+  --color-white:hsl(0, 0%, 100%);
+  --color-gray:hsl(249, 10%, 87%);
+  --color-facebook:hsl(214, 89%, 52%);
+  --color-x:hsl(204, 88%, 53%),
+  --color-youtube:hsl(0, 100%, 50%),
+  --color-black:hsl(0, 0%, 0%);
+  /*Font*/
+  --ff-montserrat:  'Montserrat Variable', sans-serif;
+  --fw-light: 200;
+  --fw-regular: 400;
+  --fw-bold: 700;
+  /*Shadown*/
+  --shadow-color: 0deg 0% 63%;
+  --shadow-medium:
+  0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+  0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+  2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+  5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+
+}
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ff-montserrat);
+  font-size: var(--size-0);
+  padding-block-end: var(--space-s);
+  color: var(--color-purpleDark);
+  background-color: var(--color-purpleLight);
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  font-weight: var(--fw-bold);
+  text-transform: capitalize;
+}
+h1 {
+  font-size: var(--size-4);
+  max-width: 20ch;
+}
+h2 {
+  font-size: var(--size-3);
+  max-width: 36ch;
+}
+h3 {
+  max-width: 40ch;
+  font-weight: var(--fw-bold);
+}
+a:hover {
+  text-decoration: currentColor;
+}
+button {
+  all: unset;
+}
+
+p {
+  max-width: 52ch;
+  font-family: var(--ff-lora);
+}
+img{
+height: auto;
+}
+
+
+ul{
+padding: 0;
+margin: 0;
+}
+
+

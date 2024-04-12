@@ -1,0 +1,17 @@
+---
+import { Image } from 'astro:assets'
+
+
+interface Props{
+    icono?:any,
+    text:string,
+    class?:string,
+
+}
+const {icono, class:className,text} = Astro.props
+---
+
+    <button class=`btn | d-flex ${className} shadow-sm ${icono ? 'pl-space-s pr-space-m' : 'px-space-m'} py-space-xs rounded`>
+        {icono ? <Image src={icono} alt="Figma"/> :""}
+       {text}
+    </button>

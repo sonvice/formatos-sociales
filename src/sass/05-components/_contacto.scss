@@ -1,0 +1,21 @@
+@use '../01-abstracts' as ab;
+
+.contact{
+    max-width: 600px;
+    &__form{
+        width: 100%;
+    }
+    & input, & textarea{
+        width: 100%;
+    }
+
+    & p {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    & .btn{
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

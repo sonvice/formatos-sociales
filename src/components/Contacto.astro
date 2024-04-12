@@ -1,0 +1,85 @@
+---
+import Button from "./Button.astro";
+---
+<div class="container">
+    <div class="contact | text-center pt-space-3xl m-space-auto">
+        <h1 >Contacto</h1>
+        <p>¿Quieres enviarme un mensaje?</p>
+        <form
+        name="contact"
+        id="form"
+        method="POST"
+        class="contact__form | d-flex flow mt-space-m"
+      >
+      <input type="hidden" name="access_key" value="bbf7e249-4ae4-4a54-9b17-5559b10286e8"/>
+        <p class="d-flex">
+          <label class="visually-hidden">
+            Email: 
+          </label>
+          <input class="bg-purple-light rounded px-space-m py-space-xs" required type="text" placeholder="Ingresa tu email" name="name" />
+        </p>
+        <p class="d-flex">
+          <label class="visually-hidden">
+            Message: 
+          </label>
+          <textarea name="message" class="bg-purple-light rounded px-space-m py-space-xs" required rows="4" cols="50"  placeholder="Message"></textarea>
+        </p>
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+        <p>
+          <Button text="Enviar" class:list={'bg-purple-dark text-white'}/>
+        </p>
+        <div class="visually-hidden"id="result"></div>
+      </form>
+    </div>
+</div>
+
+<script is:inline>
+    //Código para msj al enviar el email
+    const form = document.getElementById('form');
+    const result = document.getElementById('result');
+    
+    form.addEventListener('submit', function(e) {
+        const formData = new FormData(form);
+        e.preventDefault();
+    
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+    
+        result.innerHTML = "Please wait..."
+    
+        fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    result.innerHTML = json.message;
+                } else {
+                    console.log(response);
+                    result.innerHTML = json.message;
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                result.innerHTML = "Something went wrong!";
+            })
+            .then(function() {
+                form.reset();
+                setTimeout(() => {
+                    result.style.display = "none";
+                }, 3000);
+            });
+    });
+    </script>
+  
+  <script>
+    window.onload = function() {
+        // Reset the form fields when the page loads
+        document.getElementById("form").reset();
+    };
+  </script>

@@ -1,0 +1,17 @@
+---
+import { menu } from "../constant";
+import { Home, Contact } from "lucide-astro";
+import NavLink from "./NavLink.astro";
+---
+
+<nav class="nav | d-flex">
+  {
+    menu.map((item) => (
+      <NavLink href={item.href}>
+        <span>{item.text === "inicio" ? <Home /> : <Contact />}</span>
+        {item.text}
+      </NavLink>
+    ))
+  }
+</nav>
+

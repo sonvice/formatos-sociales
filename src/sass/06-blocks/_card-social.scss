@@ -1,0 +1,19 @@
+.card-social{
+    &__btn{
+        & a,button{
+            flex-grow: 1;
+        }
+    }
+
+}
+
+.card-sizes{
+    span{
+        display: inline-block;
+        border-bottom: 1px solid var(--color-gray);
+    }
+}
+
+.card-list{
+    list-style: disc;
+}

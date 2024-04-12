@@ -1,0 +1,89 @@
+---
+import { facebookMenu, illustrator, photoshop } from "../assets";
+import Button from "../components/Button.astro";
+import { figma } from "../assets";
+const { redSocial, img, bg, sizes,class:className,icon, id,fileFig, filePSD, fileAI } = Astro.props;
+---
+
+<div class="card-social | container pt-space-xl">
+  <h2 class="d-flex py-space-l" id={id}>
+        <img
+          src={icon.src}
+          width={facebookMenu.width / 2}
+          alt="Icono Facebook"
+        />
+        {redSocial}
+  </h2>
+  <div class="card-social__box | bg-white p-space-m rounded">
+    <h3 class="size-1">Tamaños de imágenes para {redSocial} 2024</h3>
+    <p class="size--1 mt-space-xs">
+      Descargar todos los tamaños de imágenes para {redSocial}
+    </p>
+
+    <div class="card-social__btn | py-space-l d-flex">
+      <a href={fileFig} download class="decoration d-flex text-purple-dark">
+        <Button text="Descargar" class:list={'bg-purple-light'} icono={figma} />
+      </a>
+      <a href={filePSD} download class="decoration d-flex text-purple-dark">
+        <Button text="Descargar" class:list={'bg-purple-light'} icono={photoshop} />
+      </a>
+      <a href={fileAI} download class="decoration d-flex text-purple-dark">
+        <Button text="Descargar" class:list={'bg-purple-light'} icono={illustrator} />
+      </a>
+    </div>
+    <div class=`card-social__bg | rounded p-space-l ${bg}`>
+      <img src={img.src} alt="" />
+    </div>
+  </div>
+
+    <ul role="list" class=`card-sizes relative mt-space-l ${className}`>
+      {sizes.map((item) => 
+      <li class="bg-white fw-bold absolute p-space-m rounded size-1"><span class="pb-space-3xs">{item.title}</span>
+      <ul class="card-list ml-space-s mt-space-s flow">{item.formatos.map((item)=>( 
+            <li class="fw-regular size-0">{item}</li>
+        ))}</ul></li>)
+      }
+    </ul>
+
+</div>
+
+
+
+
+<script>
+    import MiniMasonry from "minimasonry";
+
+const masonry1 = new MiniMasonry({
+  container: '.facebookGrid',
+  surroundingGutter: false,
+    gutter:36,
+    baseWidth:300,
+    
+});
+const masonry2 = new MiniMasonry({
+  container: '.instagramGrid',
+  surroundingGutter: false,
+    gutter:36,
+    baseWidth:300,
+    
+});
+const masonry3 = new MiniMasonry({
+  container: '.xGrid',
+  surroundingGutter: false,
+    gutter:36,
+    baseWidth:300,
+});
+const masonry4 = new MiniMasonry({
+  container: '.YoutubeGrid',
+  surroundingGutter: false,
+    gutter:36,
+    baseWidth:300,
+});
+const masonry5 = new MiniMasonry({
+  container: '.tiktokGrid',
+  surroundingGutter: false,
+    gutter:36,
+    baseWidth:300,
+});
+
+</script>

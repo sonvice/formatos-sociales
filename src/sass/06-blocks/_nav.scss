@@ -1,0 +1,8 @@
+.nav{
+    --horizontal-alignment:center;
+    &__item{
+        flex-direction: column;
+        --gutter:0;
+        transition: .2s ease;
+    }
+}

@@ -1,0 +1,69 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+
+import { formatoIG,facebookMenu,instagramMenu, xMenu,formatoFB,formatoX,youTubeMenu,formatoYoutube,tiktokMenu,formatoTikTok } from "../assets";
+import Nav from '../components/Nav.astro'
+import CardSocial from '../components/CardSocial.astro'
+import { facebookSize, instagramSize, tikTokSize, xSize, youTubeSize } from "../constant";
+import Input from "../components/Input.astro";
+import Hero from "../components/Hero.astro";
+import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation.astro";
+//Files
+const fileFigFa = '/formatos/formatos-facebook.fig'
+const filePSDFa = '/formatos/formatos-facebook.psd'
+const fileAIFa = '/formatos/formatos-facebook.ai'
+const fileFigIn = '/formatos/formatos-instagram.fig'
+const filePSDIn = '/formatos/formatos-instagram.psd'
+const fileAIIn = '/formatos/formatos-instagram.ai'
+const fileFigX = './formatos/formatos-x.fig'
+const filePSDX = './formatos/formatos-x.psd'
+const fileAIX = './formatos/formatos-x.ai'
+const fileFigYou = './formatos/formatos-YouTube.fig'
+const filePSDYou = './formatos/formatos-YouTube.psd'
+const fileAIYou = './formatos/formatos-YouTube.ai'
+const fileFigTik = './formatos/formatos-tiktok.fig'
+const filePSDTik = './formatos/formatos-tiktok.psd'
+const fileAITik = './formatos/formatos-tiktok.ai'
+---
+
+<html lang="en">
+  <head>
+    <BaseHead
+      title="Formatos | Redes Sociales"
+      description="Tamaños de imágenes para redes sociales,Facebook, Instagram,X(Twitter),TikTok..."
+    />
+  </head>
+  <body>
+    <header class="header py-space-l" id="header">
+		<Nav/>
+    </header>
+    <main>
+		<Hero/>
+		<Navigation/>
+	  <section class="mt-space-2xl-3xl">
+		  <CardSocial icon={facebookMenu} fileFig={fileFigFa} filePSD={filePSDFa} fileAI={fileAIFa} class:list={'facebookGrid'} id="facebook" redSocial="facebook" img={formatoFB} bg="bg-facebook" sizes={facebookSize}/>
+		  <Input/>
+		</section>
+		<section class="mt-space-2xl-3xl">
+			<CardSocial icon={instagramMenu} fileFig={fileFigIn} filePSD={filePSDIn} fileAI={fileAIIn} class:list={'instagramGrid'} id="instagram" redSocial="instagram" img={formatoIG} bg="gradient" sizes={instagramSize}/>
+			<Input/>
+		</section>
+		<section class="mt-space-2xl-3xl">
+			<CardSocial icon={xMenu} fileFig={fileFigX} filePSD={filePSDX} fileAI={fileAIX} class:list={'xGrid'} redSocial="X(Twitter)" id="x" img={formatoX} bg="bg-x" sizes={xSize}/>
+			<Input/>
+		</section>
+		<section class="mt-space-2xl-3xl">
+			<CardSocial icon={youTubeMenu} fileFig={fileFigYou} filePSD={filePSDYou} fileAI={fileAIYou} class:list={'YoutubeGrid'} redSocial="youTube" id="youTube" img={formatoYoutube} bg="bg-youtube" sizes={youTubeSize}/>
+			<Input/>
+		</section>
+		<section class="mt-space-2xl-3xl">
+			<CardSocial icon={tiktokMenu} fileFig={fileFigTik} filePSD={filePSDTik} fileAI={fileAITik} class:list={'tiktokGrid'} redSocial="tikTok" id="tiktok" img={formatoTikTok} bg="bg-black" sizes={tikTokSize}/>
+			<Input/>
+		</section>
+    </main>
+	<footer>
+		<Footer/>
+	</footer>
+  </body>
+</html>

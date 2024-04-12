@@ -1,0 +1,65 @@
+/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1200,18,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+/* Typography */
+$text-sizes:(
+     /* size -2: 11.1111px → 10.1301px */
+  "size--2": clamp(0.6331rem, 0.7283rem + -0.1691vi, 0.6944rem),
+  /* size--1:  13.3333px → 13.5034px  */
+  "size--1": clamp(0.8333rem, 0.8275rem + 0.0293vi, 0.844rem),
+  /* size :0 16px → 18px  */
+  "size-0": clamp(1rem, 0.931rem + 0.3448vi, 1.125rem),
+  /* size 1: 19.2px → 23.994px */
+  "size-1": clamp(1.2rem, 1.0347rem + 0.8266vi, 1.4996rem),
+  /* size 2: 23.04px → 31.984px */
+  "size-2": clamp(1.44rem, 1.1316rem + 1.5421vi, 1.999rem),
+  /* size 3: 27.648px → 42.6347px */
+  "size-3": clamp(1.728rem, 1.2112rem + 2.5839vi, 2.6647rem),
+  /* size 4: 33.1776px → 56.832px */
+  "size-4": clamp(2.0736rem, 1.2579rem + 4.0783vi, 3.552rem),
+  /* size 5: 39.8131px → 75.7571px */
+  "size-5": clamp(2.4883rem, 1.2489rem + 6.1972vi, 4.7348rem),
+);
+
+
+/* Space */
+$spaces:(
+    "space-auto":auto,
+    "space-0":0,
+  /* Space 3xs: 4px → 5px */
+  "space-3xs":  clamp(0.25rem, 0.2155rem + 0.1724vi, 0.3125rem),
+  /* Space 2xs: 8px → 10px */
+  "space-2xs": clamp(0.5rem, 0.4655rem + 0.1724vi, 0.5625rem),
+  /* Space xs: 12px → 15px */
+  "space-xs": clamp(0.75rem, 0.681rem + 0.3448vi, 0.875rem),
+  /* Space s: 16px → 20px */
+  "space-s": clamp(1rem, 0.931rem + 0.3448vi, 1.125rem),
+  /* Space m: 24px → 30px */
+  "space-m": clamp(1.5rem, 1.3966rem + 0.5172vi, 1.6875rem),
+  /* Space l: 32px → 40px */
+  "space-l": clamp(2rem, 1.8621rem + 0.6897vi, 2.25rem),
+  /* Space xl: 48px → 60px */
+  "space-xl": clamp(3rem, 2.7931rem + 1.0345vi, 3.375rem),
+  /* Space 2xl: 64px → 80px */
+  "space-2xl": clamp(4rem, 3.7241rem + 1.3793vi, 4.5rem),
+  /* Space 3xl: 96px → 120px */
+  "space-3xl": clamp(6rem, 5.5862rem + 2.069vi, 6.75rem),
+  /* One-up pairs */
+  "space-2xl-3xl": clamp(4rem, 2.4828rem + 7.5862vi, 6.75rem),
+);
+
+
+/* Colors */
+$primary: (
+  "purple-dark": hsl(251, 67%, 10%),
+  "purple-light": hsl(240, 17%, 98%)
+);
+
+//### Neutral
+$neutral: (
+  "facebook": hsl(214, 89%, 52%),
+  "x": hsl(204, 88%, 53%),
+  "youtube": hsl(0, 100%, 50%),
+  "black": hsl(0, 0%, 0%),
+  "white": hsl(0, 0%, 100%),
+  "gray": hsl(249, 10%, 87%),
+);

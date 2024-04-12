@@ -1,0 +1,8 @@
+.hero{
+    --flow-space:var(--space-xl);
+
+    &__curve{
+        bottom: -1rem;
+        left: 0;
+    }
+}

@@ -1,0 +1,12 @@
+@use '../01-abstracts/' as b;
+
+.footer{
+    &__box{
+        flex-direction: column;
+        --vertical-alignment:stretch;
+    }
+    &__icons, &__info{
+        --horizontal-alignment:space-between;
+    }
+
+}

@@ -1,0 +1,23 @@
+---
+const { pathname } = Astro.url;
+const { href } = Astro.props;
+const isActive = href === pathname || href === pathname.replace(/\/$/, "");
+---
+
+<a
+  href={href}
+  class:list={[
+    "nav__item | d-flex capitalize text-gray decoration fw-bold",
+    { active: isActive },
+  ]}
+>
+  <slot />
+</a>
+<style>
+    a:hover{
+        color: var(--color-purpleDark);
+    }
+    .active {
+      color: var(--color-purpleDark);
+    }
+  </style>

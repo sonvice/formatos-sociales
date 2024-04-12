@@ -1,0 +1,53 @@
+---
+import { facebookFill, intagramFill, logo, twitterFill } from "../assets";
+---
+<div class="container">
+    <div class="footer__box d-flex bg-purple-dark p-space-m mt-space-3xl text-white rounded">
+        <div class="footer__icons | d-flex">
+            <a href="/"><img src={logo.src} alt="Logo"></a>
+            <div class="footer__social | d-flex">
+                <a href="#"><img src={facebookFill.src} alt="Facebook"></a>
+                <a href="#"><img src={intagramFill.src} alt="Instagram"></a>
+                <a href="#"><img src={twitterFill.src} alt="Twitter"></a>
+            </div>
+
+        </div>
+        <div class="footer__info | d-flex size--1">
+            <p>info@formatossociales.com</p> <p>©2024. All rights reserved.</p>
+        </div>
+    </div>
+</div>
+<a href="#header" class="scrollTo d-flex shadow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V6M5 12l7-7 7 7"/></svg></a>
+
+
+<style lang="scss">
+    @use '../sass/01-abstracts/' as b;
+    .scrollTo{
+        position: fixed;
+        z-index: 20;
+        top: 1rem;
+        right: 2rem;
+        width: b.px-to-rem(52px);
+        height: b.px-to-rem(52px);
+        border-radius: 100px;
+        background-color: var(--color-purpleLight);
+        --horizontal-alignment:center;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s ease;
+        cursor: pointer;
+    }
+    .visible{
+        visibility: visible;
+        opacity: 1;
+        top: 50rem;
+    }
+</style>
+
+<script>
+     const scrollBtn = document.querySelector('.scrollTo');
+    window.addEventListener('scroll', (e)=>{
+        scrollBtn.classList.toggle('visible', window.scrollY > 500)
+    
+    })
+</script>

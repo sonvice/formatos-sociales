@@ -1,0 +1,22 @@
+@use '../01-abstracts/' as b;
+.navigation{
+    --horizontal-alignment:center; 
+    position: sticky;
+    top: 0;
+    background-color: hsla(var(--color-purpleLightHsl), 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 15;
+    overflow-x: auto;
+    flex-wrap: nowrap; 
+    & a{
+        transition: .2s ease;
+    }
+    & a:hover{
+        transform: scale(1.02);
+    }
+    & img{
+        @include b.breakpoint-down(md){
+            max-width: b.px-to-rem(60px);
+        }
+    }
+}

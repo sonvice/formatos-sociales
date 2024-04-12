@@ -1,0 +1,62 @@
+---
+import Button from "./Button.astro"
+
+---
+
+<div class="container">
+    <form  name="contact"
+    id="formulario"
+    method="POST" class="input d-flex p-space-m bg-white rounded mt-space-l">
+    <input type="hidden" name="access_key" value="bbf7e249-4ae4-4a54-9b17-5559b10286e8"/>
+        <div class="input__text">
+            <p>¿Cambio algún formato?</p>
+            <input type="email" required class="bg-purple-light rounded px-space-m py-space-xs" placeholder="Ingresa tu correo electrónico">
+        </div>
+        <Button text="Quiero enterarme" class:list={'bg-purple-dark capitalize fw-bold text-white mt-space-auto'}/>
+        <div class="visually-hidden"id="resultado"></div>
+    </form>
+</div>
+
+<script is:inline>
+    //Código para msj al enviar el email
+    const form = document.getElementById('formulario');
+    const result = document.getElementById('resultado');
+    
+    form.addEventListener('submit', function(e) {
+        const formData = new FormData(form);
+        e.preventDefault();
+    
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+    
+        result.innerHTML = "Please wait..."
+    
+        fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    result.innerHTML = json.message;
+                } else {
+                    console.log(response);
+                    result.innerHTML = json.message;
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                result.innerHTML = "Something went wrong!";
+            })
+            .then(function() {
+                form.reset();
+                setTimeout(() => {
+                    result.style.display = "none";
+                }, 3000);
+            });
+    });
+    </script>

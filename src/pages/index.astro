@@ -9,6 +9,7 @@ import Input from "../components/Input.astro";
 import Hero from "../components/Hero.astro";
 import Footer from "../components/Footer.astro";
 import Navigation from "../components/Navigation.astro";
+import Button from '../components/Button.astro'
 //Files
 const fileFigFa = '/formatos/formatos-facebook.fig'
 const filePSDFa = '/formatos/formatos-facebook.psd'
@@ -52,23 +53,58 @@ const fileAITik = './formatos/formatos-tiktok.ai'
 		<Navigation/>
 	  <section class="mt-space-2xl-3xl">
 		  <CardSocial icon={facebookMenu} fileFig={fileFigFa} filePSD={filePSDFa} fileAI={fileAIFa} class:list={'facebookGrid'} id="facebook" redSocial="facebook" img={formatoFB} bg="bg-facebook" sizes={facebookSize}/>
-		  <Input/>
+		  <div class="container">
+				<div class="box-cta d-flex p-space-m bg-white rounded mt-space-l">
+					<p class="size-1 fw-bold">¿Cambio algún formato?</p>
+					<a href="/contacto" class="d-flex">
+						<Button text="Quiero enterarme" class:list={'bg-purple-dark capitalize fw-bold text-white mt-space-auto'}/>
+					</a>
+				</div>
+			</div>
 		</section>
 		<section class="mt-space-2xl-3xl">
 			<CardSocial icon={instagramMenu} fileFig={fileFigIn} filePSD={filePSDIn} fileAI={fileAIIn} class:list={'instagramGrid'} id="instagram" redSocial="instagram" img={formatoIG} bg="gradient" sizes={instagramSize}/>
-			<Input/>
+			<div class="container">
+				<div class="box-cta d-flex p-space-m bg-white rounded mt-space-l">
+					<p class="size-1 fw-bold">¿Cambio algún formato?</p>
+					<a href="/contacto" class="d-flex">
+						<Button text="Quiero enterarme" class:list={'bg-purple-dark capitalize fw-bold text-white mt-space-auto'}/>
+					</a>
+				</div>
+			</div>
 		</section>
 		<section class="mt-space-2xl-3xl">
 			<CardSocial icon={xMenu} fileFig={fileFigX} filePSD={filePSDX} fileAI={fileAIX} class:list={'xGrid'} redSocial="X(Twitter)" id="x" img={formatoX} bg="bg-x" sizes={xSize}/>
-			<Input/>
+			<div class="container">
+				<div class="box-cta d-flex p-space-m bg-white rounded mt-space-l">
+					<p class="size-1 fw-bold">¿Cambio algún formato?</p>
+					<a href="/contacto" class="d-flex">
+						<Button text="Quiero enterarme" class:list={'bg-purple-dark capitalize fw-bold text-white mt-space-auto'}/>
+					</a>
+				</div>
+			</div>
 		</section>
 		<section class="mt-space-2xl-3xl">
 			<CardSocial icon={youTubeMenu} fileFig={fileFigYou} filePSD={filePSDYou} fileAI={fileAIYou} class:list={'YoutubeGrid'} redSocial="youTube" id="youTube" img={formatoYoutube} bg="bg-youtube" sizes={youTubeSize}/>
-			<Input/>
+			<div class="container">
+				<div class="box-cta d-flex p-space-m bg-white rounded mt-space-l">
+					<p class="size-1 fw-bold">¿Cambio algún formato?</p>
+					<a href="/contacto" class="d-flex">
+						<Button text="Quiero enterarme" class:list={'bg-purple-dark capitalize fw-bold text-white mt-space-auto'}/>
+					</a>
+				</div>
+			</div>
 		</section>
 		<section class="mt-space-2xl-3xl">
 			<CardSocial icon={tiktokMenu} fileFig={fileFigTik} filePSD={filePSDTik} fileAI={fileAITik} class:list={'tiktokGrid'} redSocial="tikTok" id="tiktok" img={formatoTikTok} bg="bg-black" sizes={tikTokSize}/>
-			<Input/>
+			<div class="container">
+				<div class="box-cta d-flex p-space-m bg-white rounded mt-space-l">
+					<p class="size-1 fw-bold">¿Cambio algún formato?</p>
+					<a href="/contacto" class="d-flex">
+						<Button text="Quiero enterarme" class:list={'bg-purple-dark capitalize fw-bold text-white mt-space-auto'}/>
+					</a>
+				</div>
+			</div>
 		</section>
     </main>
 	<footer>

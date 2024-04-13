@@ -1,0 +1,11 @@
+@use '../01-abstracts/' as b;
+.box-cta{
+
+    @include b.breakpoint(md){
+        --gutter:var(--space-xl);
+    
+    }
+    & a, .btn{
+        flex-grow: 1;
+    }
+}

@@ -16,7 +16,7 @@
     }
     & img{
         @include b.breakpoint-down(md){
-            max-width: b.px-to-rem(60px);
+            max-width: b.px-to-rem(56px);
         }
     }
 }

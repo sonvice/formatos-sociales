@@ -1,11 +1,10 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 
-import { formatoIG,facebookMenu,instagramMenu, xMenu,formatoFB,formatoX,youTubeMenu,formatoYoutube,tiktokMenu,formatoTikTok } from "../assets";
+import { formatoIG,facebookMenu,instagramMenu, xMenu,formatoFB,formatoX,youTubeMenu,formatoYoutube,tiktokMenu,formatoTikTok, linkedInMenu,formatosLinkedin } from "../assets";
 import Nav from '../components/Nav.astro'
 import CardSocial from '../components/CardSocial.astro'
-import { facebookSize, instagramSize, tikTokSize, xSize, youTubeSize } from "../constant";
-import Input from "../components/Input.astro";
+import { facebookSize, instagramSize, tikTokSize, xSize, youTubeSize,linkedinSize } from "../constant";
 import Hero from "../components/Hero.astro";
 import Footer from "../components/Footer.astro";
 import Navigation from "../components/Navigation.astro";
@@ -26,6 +25,9 @@ const fileAIYou = './formatos/formatos-YouTube.ai'
 const fileFigTik = './formatos/formatos-tiktok.fig'
 const filePSDTik = './formatos/formatos-tiktok.psd'
 const fileAITik = './formatos/formatos-tiktok.ai'
+const fileFigLin = './formatos/formatos-linkedin.fig'
+const filePSDLin = './formatos/formatos-linkedin.psd'
+const fileAILin = './formatos/formatos-linkedin.ai'
 ---
 
 <html lang="es">
@@ -97,6 +99,17 @@ const fileAITik = './formatos/formatos-tiktok.ai'
 		</section>
 		<section class="mt-space-2xl-3xl">
 			<CardSocial icon={tiktokMenu} fileFig={fileFigTik} filePSD={filePSDTik} fileAI={fileAITik} class:list={'tiktokGrid'} redSocial="tikTok" id="tiktok" img={formatoTikTok} bg="bg-black" sizes={tikTokSize}/>
+			<div class="container">
+				<div class="box-cta d-flex p-space-m bg-white rounded mt-space-l">
+					<p class="size-1 fw-bold">¿Cambio algún formato?</p>
+					<a href="/contacto" class="d-flex">
+						<Button text="Quiero enterarme" class:list={'bg-purple-dark capitalize fw-bold text-white mt-space-auto'}/>
+					</a>
+				</div>
+			</div>
+		</section>
+		<section class="mt-space-2xl-3xl">
+			<CardSocial icon={linkedInMenu} fileFig={fileFigLin} filePSD={filePSDLin} fileAI={fileAILin} class:list={'linkedinGrid'} redSocial="linkedin" id="linkedin" img={formatosLinkedin} bg="bg-linkedin" sizes={linkedinSize}/>
 			<div class="container">
 				<div class="box-cta d-flex p-space-m bg-white rounded mt-space-l">
 					<p class="size-1 fw-bold">¿Cambio algún formato?</p>

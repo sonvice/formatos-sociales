@@ -1,4 +1,4 @@
-import { contactIcon, facebookMenu, homeIcon, instagramMenu, tiktokMenu, xMenu, youTubeMenu } from "../assets";
+import { contactIcon, facebookMenu, homeIcon, instagramMenu, linkedInMenu, tiktokMenu, xMenu, youTubeMenu } from "../assets";
 
 export const menu = [
   {icon: homeIcon, text: "inicio", href: "/", active:true },
@@ -11,6 +11,7 @@ export const socialMenu = [
   { icono: xMenu, text: "x" },
   { icono: youTubeMenu, text: "youTube" },
   { icono: tiktokMenu, text: "tiktok" },
+  { icono: linkedInMenu, text: "linkedin" },
 ];
 
 //FacebookSize
@@ -23,11 +24,14 @@ import { xSize } from "./xSize";
 import { youTubeSize } from "./youTubeSize";
 //TikTok
 import { tikTokSize } from "./tickTokSize";
+//Linkedin
+import { linkedinSize } from "./linkedinSize";
 
 export{
     facebookSize,
     instagramSize,
     xSize,
     youTubeSize,
-    tikTokSize
+    tikTokSize,
+    linkedinSize
 }
